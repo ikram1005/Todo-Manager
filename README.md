@@ -19,7 +19,7 @@ The TodoList App is a simple task management application that helps you stay org
 
 ### Visit Our Website
 
-[todotracker-app](https://todotracker-app.netlify.app/home)
+[todotracker-app](https://todotracker-app.netlify.app)
 
 
 ## Contributing
