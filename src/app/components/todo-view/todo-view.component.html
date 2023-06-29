@@ -1,0 +1,15 @@
+<div class="card mt-2 mb-3">
+    <div class="card-body" [ngClass]="{'bg-success':todo.complete,'text-white':todo.complete||!todo.complete,'bg-secondary':!todo.complete}">
+        <h4>{{todo.title}}</h4>
+        <p>{{todo.content}}</p>
+        <div class="form-check mt-4" *ngIf="!todo.complete">
+            <input class="form-check-input" type="checkbox" id="check1" value="option1"
+                (change)="MarkAsDone($event,todo.id)">
+            <label class="form-check-label">Mark as done</label>
+        </div>
+        <div class="container text-center">
+            <button class="btn btn-danger btn sm" (click)="deleteTodo(todo.id)">Delete</button>
+            <button class="btn btn-primary btn sm ms-2" [routerLink]="['/update-todo',todo.id]">Update</button>
+        </div>
+    </div>
+</div>

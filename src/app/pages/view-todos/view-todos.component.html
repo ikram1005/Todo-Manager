@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card border-1 shadow-sm my-4">
+                <div class="card-body pb-2">
+                    <h3>All Todos</h3>
+                    <div class="alert alert-info" *ngIf="todos.length==0">
+                        <p>No todos found.</p>
+                        <button class="btn btn-primary btn-sm" [routerLink]="'/add-todo'">add</button>
+                    </div>
+                    <app-todo-view *ngFor="let todo of todos" [todo]="todo"
+                    (deleteEvent)="deleteCard($event)"
+                    ></app-todo-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
